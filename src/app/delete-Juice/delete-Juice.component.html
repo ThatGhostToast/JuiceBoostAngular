@@ -1,0 +1,9 @@
+<p>Delete Juice</p>
+<form (ngSubmit)="onSubmit()" #infoForm="ngForm">
+  <div class="form-group" style="margin-left: 50px; margin-right: 50px">
+    <label for="submit"
+      >Are you sure you want to delete, "{{juiceName}}"?</label
+    >
+    <button type="submit" class="btn btn-success">Yes</button>
+  </div>
+</form>

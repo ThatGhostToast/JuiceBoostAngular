@@ -1,0 +1,32 @@
+<div align="center">
+    <div class="card mb-6" style="max-width: 500px">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <div style="height:150px; width:150px; overflow:hidden">
+                    <img src="assets/images/{{juice.ImageName}}" class="card-img" alt="{{juice.Name}}" width="150px" height="150px">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{juice.Name}}</h5>
+                    <p class="card-text"><strong>Benefits:</strong> {{juice.Benefits}}</p>
+                    <p class="card-text"><strong>Ingredients:</strong> {{juice.Ingredients}}</p>
+                    <p class="card-text"><strong>How to make:</strong> {{juice.Htm}}</p>
+                    <table>
+                        <tr>
+                            <td width="50px" align="center">
+                                <a href="#" data-toggle="collapse" data-target="#collapseTracks" aria-expanded="false" aria-controls="collapseTracks"><i class="fa fa-list"></i></a>
+                            </td>
+                            <td width="50px" align="center">
+                                <a [routerLink]="['/edit', juice.Name, juice.Id]"><i class="fa fa-edit"></i></a>
+                            </td>
+                            <td width="50px" align="center">
+                                <a [routerLink]="['/delete', juice.Name, juice.Id]"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

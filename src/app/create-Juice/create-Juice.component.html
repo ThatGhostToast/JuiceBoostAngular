@@ -1,0 +1,59 @@
+<p>Create a New Juice</p>
+<form (ngSubmit)="onSubmit()" #infoForm="ngForm">
+  <div class="form-group" style="margin-left: 50px; margin-right: 50px">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      required
+      [(ngModel)]="name"
+      name="name"
+    />
+    <label for="ingredients">Ingredients</label>
+    <input
+      type="text"
+      class="form-control"
+      id="ingredients"
+      required
+      [(ngModel)]="ingredients"
+      name="ingredients"
+    />
+    <label for="benefits">Benefits</label>
+    <input
+      type="text"
+      class="form-control"
+      id="benefits"
+      required
+      [(ngModel)]="benefits"
+      name="benefits"
+    />
+    <label for="htm">Htm</label>
+    <input
+      type="text"
+      class="form-control"
+      id="htm"
+      required
+      [(ngModel)]="htm"
+      name="htm"
+    />
+    <label for="images">Image</label>
+    <select
+      class="form-control"
+      id="images"
+      required
+      [(ngModel)]="selectedImage"
+      name="images"
+      #selected="ngModel"
+    >
+      <option *ngFor="let image of images" [value]="image">
+        {{ image }}
+      </option>
+    </select>
+    <button type="submit" class="btn btn-success">Create</button>
+    <button type="button" class="btn btn-default" (click)="reset()">
+      Reset
+    </button>
+    <a href="http://localhost:4200" class="btn btn-default">Close</a>
+  </div>
+</form>
